@@ -1,0 +1,10 @@
+.resizer
+{
+	height : 25%;
+}
+
+.fit-content > div 
+{
+	height : 75%;
+	font-size: 5px;
+}
