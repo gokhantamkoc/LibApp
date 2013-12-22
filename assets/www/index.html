@@ -52,5 +52,84 @@
 				<h4>Page Footer</h4>
 			</div><!-- /footer -->
 		</div>
-  	</body>
+
+
+
+
+        <!-- login page  -->
+
+
+        <div data-role="page" id="login">
+            <div data-role="header" data-theme="b">
+                <h1>Library Application</h1>
+            </div>
+            <div data-role="content">
+                <label> Please enter your Library Username and Password</label>
+
+                <input type="text" name="username" id="username"
+                       placeholder="Username">
+
+
+                <input type="password" name="password" id="password"
+                       placeholder="Password">
+
+
+                <a href="#profile" data-role="button"  data-inline="true" >Login</a>
+
+            </div>
+            <div data-role="footer" data-theme="b">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+
+        </div>
+
+        <!-- profile page  -->
+        <div data-role="page" id="profile">
+            <div data-role="header" data-theme="b">
+                <h1>Library Application</h1>
+            </div>
+            <div data-role="content">
+                <div>
+                    <p>Welcome Dark Lord</p>
+                    <p>   - You have 27 $ fine</p>
+                    <p>  - You have 2 book due</p>
+
+                </div>
+                <div>
+                    <label>Borrowed Books</label>
+
+                </div>
+
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible">
+                        <h1>Book1</h1>
+                        <p>book1 description</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h1>Book2</h1>
+                        <p>book1 description</p>
+                    </div>
+                </div>
+
+                <div>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <a href="#login" data-role="button">Search</a>
+                        <a href="#login" data-role="button">Reading History</a>
+                        <a href="#login" data-role="button">Renew Selected</a>
+                        <a href="#login" data-role="button">Renew All</a>
+
+                    </fieldset>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="b">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+
+        </div>
+
+
+
+
+
+    </body>
 </html>
