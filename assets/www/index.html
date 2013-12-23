@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Notification Example</title>
+		<title>Library Application</title>
 		<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.0.min.css"/>
         <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.theme-1.4.0.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -10,11 +10,20 @@
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.4.0.js"></script>
 	</head>
 	<body>
-		<!-- Start of first page -->
-		<div data-role="page" id="foo">
-		
+		<!-- Advanced Search -->
+		<div data-role="page" id="home">
+			
 			<div data-role="header">
-				<h1>Foo</h1>
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+            			<li><a href="#login" data-role="button">Login</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
 			</div>
 			<div data-role="content" class="fit-content">
 				<div class="resizer">
@@ -60,24 +69,29 @@
 
 
         <div data-role="page" id="login">
-            <div data-role="header" data-theme="b">
-                <h1>Library Application</h1>
-            </div>
-            <div data-role="content">
+            <div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+            			<li><a href="#home" data-role="button">Search</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
+            <div data-role="content" class="fit-content">
                 <label> Please enter your Library Username and Password</label>
 
-                <input type="text" name="username" id="username"
-                       placeholder="Username">
-
-
-                <input type="password" name="password" id="password"
-                       placeholder="Password">
+                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="password" name="password" id="password" placeholder="Password">
 
 
                 <a href="#profile" data-role="button"  data-inline="true" >Login</a>
 
             </div>
-            <div data-role="footer" data-theme="b">
+            <div data-role="footer">
                 <h1> Copyright (r) GOF-HCI2013 </h1>
             </div>
 
@@ -85,19 +99,28 @@
 
         <!-- profile page  -->
         <div data-role="page" id="profile">
-            <div data-role="header" data-theme="b">
-                <h1>Library Application</h1>
-            </div>
+            <div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+    					<li><a href="#home" data-role="button">Search</a></li>
+            			<li><a href="#home" data-role="button">Logout</a></li>
+            			<li><a href="#settings" data-role="button">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
             <div data-role="content">
                 <div>
                     <p>Welcome Dark Lord</p>
-                    <p>   - You have 27 $ fine</p>
-                    <p>  - You have 2 book due</p>
+                    <p> - You have 27 $ fine</p>
+                    <p> - You have 2 book due</p>
 
                 </div>
                 <div>
                     <label>Borrowed Books</label>
-
                 </div>
 
                 <div data-role="collapsible-set">
@@ -121,15 +144,9 @@
                     </fieldset>
                 </div>
             </div>
-            <div data-role="footer" data-theme="b">
+            <div data-role="footer">
                 <h1> Copyright (r) GOF-HCI2013 </h1>
             </div>
-
         </div>
-
-
-
-
-
     </body>
 </html>
