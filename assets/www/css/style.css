@@ -9,6 +9,8 @@
 	font-size: 5px;
 }
 
+.ui-controlgroup-horizontal .ui-controlgroup-controls { display: block !important; }
+
 .ui-panel-inner 
 {
 	padding:0px; /*make the buttons flush edge to edge*/

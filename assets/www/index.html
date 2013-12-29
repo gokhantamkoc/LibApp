@@ -83,10 +83,10 @@
 			</div>
             <div data-role="content" class="fit-content">
                 <label> Please enter your Library Username and Password</label>
-
-                <input type="text" name="username" id="username" placeholder="Username">
-                <input type="password" name="password" id="password" placeholder="Password">
-
+                <div class="fit-content">
+                <input type="text" name="username" id="username" placeholder="Username" data-mini="true">
+                <input type="password" name="password" id="password" placeholder="Password" data-mini="true">
+                </div>
 
                 <a href="#profile" data-role="button"  data-inline="true" >Login</a>
 
@@ -123,25 +123,25 @@
                     <label>Borrowed Books</label>
                 </div>
 
-                <div data-role="collapsible-set">
-                    <div data-role="collapsible">
+                <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r" >
+                    <div data-role="collapsible" >
                         <h1>Book1</h1>
                         <p>book1 description</p>
                     </div>
-                    <div data-role="collapsible">
+                    <div data-role="collapsible" >
                         <h1>Book2</h1>
-                        <p>book1 description</p>
+                        <p>book2 description</p>
                     </div>
                 </div>
 
-                <div>
-                    <fieldset data-role="controlgroup" data-type="horizontal">
-                        <a href="#login" data-role="button">Search</a>
-                        <a href="#login" data-role="button">Reading History</a>
-                        <a href="#login" data-role="button">Renew Selected</a>
-                        <a href="#login" data-role="button">Renew All</a>
+                <div class="fit-content">
+                    <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#login"   data-role="button">Search</a>
+                        <a href="#login"  data-role="button">Reading History</a>
+                        <a href="#login"  data-role="button">Renew Selected</a>
+                        <a href="#login"   data-role="button">Renew All</a>
 
-                    </fieldset>
+                    </div>
                 </div>
             </div>
             <div data-role="footer">
