@@ -16,13 +16,13 @@
 			<div data-role="header">
 				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
-            			<li><a href="#login" data-role="button">Login</a></li>
-            			<li><a href="#settings" data-role="button">Settings</a></li>
+            			<li><a href="#login" data-role="button" data-icon="user">Login</a></li>
+            			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
         			</div>
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" href="#navpanel"></a>
 				</div>
 			</div>
 			<div data-role="content" class="fit-content">
@@ -44,41 +44,19 @@
 				</div>
 			</div>
 		</div>
-		
-		<!-- Start of second page -->
-		<div data-role="page" id="bar" class="fitPage">
-		
-			<div data-role="header">
-				<h1>Bar</h1>
-			</div><!-- /header -->
-		
-			<div data-role="content">
-				<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-				<p><a href="#foo" data-transition="slide">Back to foo</a></p>
-			</div><!-- /content -->
-		
-			<div data-role="footer">
-				<h4>Page Footer</h4>
-			</div><!-- /footer -->
-		</div>
-
-
-
 
         <!-- login page  -->
-
-
         <div data-role="page" id="login">
             <div data-role="header">
 				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
-            			<li><a href="#home" data-role="button">Search</a></li>
-            			<li><a href="#settings" data-role="button">Settings</a></li>
+            			<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
+            			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
         			</div>
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
 				</div>
 			</div>
             <div data-role="content" class="fit-content">
@@ -102,14 +80,15 @@
             <div data-role="header">
 				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
-    					<li><a href="#home" data-role="button">Search</a></li>
-            			<li><a href="#home" data-role="button">Logout</a></li>
-            			<li><a href="#settings" data-role="button">Settings</a></li>
+    					<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
+            			<li><a href="#home" data-role="button" data-icon="user">Logout</a></li>
+            			<li><a href="#readingHistory" data-role="button" data-icon="bullets">Reading History</a></li>
+            			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
         			</div>
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="bars" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
 				</div>
 			</div>
             <div data-role="content">
@@ -136,11 +115,70 @@
 
                 <div class="fit-content">
                     <div data-role="controlgroup" data-type="horizontal" data-mini="true">
-                        <a href="#login"   data-role="button">Search</a>
-                        <a href="#login"  data-role="button">Reading History</a>
-                        <a href="#login"  data-role="button">Renew Selected</a>
-                        <a href="#login"   data-role="button">Renew All</a>
+                        <a href="#home" data-role="button">Search</a>
+                        <a href="#readingHistory" data-role="button">Reading History</a>
+                        <a href="#" data-role="button">Renew Selected</a>
+                        <a href="#" data-role="button">Renew All</a>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+        </div>
+        <!-- reading history page  -->
+        <div data-role="page" id="readingHistory">
+            <div data-role="header">
+				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+    					<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
+            			<li><a href="#home" data-role="button" data-icon="user">Logout</a></li>
+            			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+				</div>
+			</div>
+            <div data-role="content" data-scroll="true" style="height : 75%;">
+                <div>
+                    <p>Welcome Dark Lord</p>
+                    <p> - You have 27 $ fine</p>
+                    <p> - You have 2 book due</p>
 
+                </div>
+                <div>
+                    <center><h2>Dark Lord's Reading History</h2></center>
+                </div>
+
+                <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r">
+                    <div data-role="collapsible" >
+                        <h3>How to be an apache</h3>
+                        <b>Author: </b> J. Doe <br/>
+                    	<b>Shelf: HD123 2013</b>
+                    </div>
+                    <div data-role="collapsible" >
+                        <h3>Improving Haircut Abilities</h3>
+                        <b>Author: </b> H. Brown <br/>
+                    	<b>Shelf: ID566 2013</b>                        
+                    </div>
+                    <div data-role="collapsible" >
+                        <h3>Vision of Excellence</h3>
+                		<b>Author: </b> T. Butcher <br/>
+                        <b>Shelf: YS896 2013</b>
+                    </div>
+                    <div data-role="collapsible" >
+                        <h3>Art of Programming</h3>                        
+                        <b>Author: </b> T. Booch <br/>
+                        <b>Shelf: TD136 2013</b>                        
+                    </div>
+                </div>
+
+                <div>
+                    <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#home" data-role="button">Search</a>
+                        <a href="#profile" data-role="button">Borrowed Books</a>
                     </div>
                 </div>
             </div>

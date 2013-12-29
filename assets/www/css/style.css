@@ -26,4 +26,17 @@
 #bars-button 
 {
 	margin:7px;
+	height: 15px; 
+	width: auto;
+}
+
+#navpanel 
+{
+	margin:20px;
+	position: absolute;
+}
+
+#readingHistoryBookList
+{
+	font-size: small;
 }
