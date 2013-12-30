@@ -4,17 +4,19 @@
 		<title>Library Application</title>
 		<link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.0.min.css"/>
         <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.theme-1.4.0.min.css"/>
+		<link rel="stylesheet" type="text/css" href="jquery/jquery.rating.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
 		<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile-1.4.0.js"></script>
+		<script type="text/javascript" charset="utf-8" src="jquery/jquery.rating.js"></script>		
 	</head>
 	<body>
 		<!-- Advanced Search -->
-		<div data-role="page" id="home">
-			
+		<div data-role="page" id="home">			
 			<div data-role="header">
-				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+				<div data-role="panel" id="navpanelHome" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
             			<li><a href="#login" data-role="button" data-icon="user">Login</a></li>
             			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
@@ -22,7 +24,7 @@
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="grid" class="ui-btn-left" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" href="#navpanelHome"></a>
 				</div>
 			</div>
 			<div data-role="content" class="fit-content">
@@ -48,7 +50,7 @@
         <!-- login page  -->
         <div data-role="page" id="login">
             <div data-role="header">
-				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+				<div data-role="panel" id="navpanelLogin" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
             			<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
             			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
@@ -56,14 +58,14 @@
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanelLogin"></a>
 				</div>
 			</div>
             <div data-role="content" class="fit-content">
                 <label> Please enter your Library Username and Password</label>
-                <div class="fit-content">
-                <input type="text" name="username" id="username" placeholder="Username" data-mini="true">
-                <input type="password" name="password" id="password" placeholder="Password" data-mini="true">
+				<div class="fit-content">
+					<input type="text" name="username" id="username" placeholder="Username" data-mini="true">
+					<input type="password" name="password" id="password" placeholder="Password" data-mini="true">
                 </div>
 
                 <a href="#profile" data-role="button"  data-inline="true" >Login</a>
@@ -78,17 +80,17 @@
         <!-- profile page  -->
         <div data-role="page" id="profile">
             <div data-role="header">
-				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+				<div data-role="panel" id="navpanelProfile" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
     					<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
             			<li><a href="#home" data-role="button" data-icon="user">Logout</a></li>
-            			<li><a href="#readingHistory" data-role="button" data-icon="bullets">Reading History</a></li>
+            			<li><a href="#reading" data-role="button" data-icon="bullets">Reading History</a></li>
             			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
         			</div>
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanelProfile"></a>
 				</div>
 			</div>
             <div data-role="content">
@@ -96,14 +98,13 @@
                     <p>Welcome Dark Lord</p>
                     <p> - You have 27 $ fine</p>
                     <p> - You have 2 book due</p>
-
                 </div>
                 <div>
                     <label>Borrowed Books</label>
                 </div>
 
                 <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r" >
-                    <div data-role="collapsible-set" class="scrollable" data-iconpos="right" data-collapsed-icon="arrow-r" >
+                    <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r" >
                         <div data-role="collapsible" >
                             <h1>Book1</h1>
                             <p>book1 description</p>
@@ -133,65 +134,73 @@
                             <p>book2 description</p>
                         </div>
                     </div>
-                <div class="fit-content">
+				</div>
+                <div>
                     <div data-role="controlgroup" data-type="horizontal" data-mini="true">
                         <a href="#home" data-role="button">Search</a>
-                        <a href="#readingHistory" data-role="button">Reading History</a>
+                        <a href="#reading" data-role="button">Reading History</a>
                         <a href="#" data-role="button">Renew Selected</a>
                         <a href="#" data-role="button">Renew All</a>
                     </div>
                 </div>
-            </div>
+			</div>
             <div data-role="footer">
                 <h1> Copyright (r) GOF-HCI2013 </h1>
             </div>
         </div>
         <!-- reading history page  -->
-        <div data-role="page" id="readingHistory">
+        <div data-role="page" id="reading">
             <div data-role="header">
-				<div data-role="panel" id="navpanel" data-display="overlay" data-position="left">
+				<div data-role="panel" id="navpanelReadingHistory" data-display="overlay" data-position="left">
     				<div data-role="listview" data-corners="true">
     					<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
             			<li><a href="#home" data-role="button" data-icon="user">Logout</a></li>
+						<li><a href="#profile" data-role="button" data-icon="bullets">Borrowed Books</a></li>
             			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
         			</div>
     			</div>
     			<div id="header" data-role="header">
     				<center><h3>Library Application</h3></center>
-        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanel"></a>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanelReadingHistory"></a>
 				</div>
 			</div>
+			
             <div data-role="content" data-scroll="true" style="height : 75%;">
+			
                 <div>
                     <p>Welcome Dark Lord</p>
                     <p> - You have 27 $ fine</p>
                     <p> - You have 2 book due</p>
-
                 </div>
+				
                 <div>
-                    <center><h2>Dark Lord's Reading History</h2></center>
+                    <h2>Dark Lord's Reading History</h2>
                 </div>
-
+				
                 <div data-role="collapsible-set" data-iconpos="right" data-collapsed-icon="arrow-r">
                     <div data-role="collapsible" >
                         <h3>How to be an apache</h3>
                         <b>Author: </b> J. Doe <br/>
                     	<b>Shelf: HD123 2013</b>
+						<a href="#details" data-role="button">Pull to Left</a>
                     </div>
                     <div data-role="collapsible" >
                         <h3>Improving Haircut Abilities</h3>
                         <b>Author: </b> H. Brown <br/>
-                    	<b>Shelf: ID566 2013</b>                        
+                    	<b>Shelf: ID566 2013</b>
+						<a href="#details" data-role="button">Pull to Left</a>                        
                     </div>
                     <div data-role="collapsible" >
                         <h3>Vision of Excellence</h3>
                 		<b>Author: </b> T. Butcher <br/>
                         <b>Shelf: YS896 2013</b>
+						<a href="#details" data-role="button">Pull to Left</a>
                     </div>
                     <div data-role="collapsible" >
                         <h3>Art of Programming</h3>                        
                         <b>Author: </b> T. Booch <br/>
-                        <b>Shelf: TD136 2013</b>                        
+                        <b>Shelf: TD136 2013</b>
+						<a href="#details" data-role="button">Pull to Left</a>						
                     </div>
                 </div>
 
@@ -201,6 +210,79 @@
                         <a href="#profile" data-role="button">Borrowed Books</a>
                     </div>
                 </div>
+            </div>
+            <div data-role="footer">
+                <h1> Copyright (r) GOF-HCI2013 </h1>
+            </div>
+        </div>
+		<!-- Book Details -->
+		<div data-role="page" id="details">
+            <div data-role="header">
+				<div data-role="panel" id="navpanelReadingHistory" data-display="overlay" data-position="left">
+    				<div data-role="listview" data-corners="true">
+    					<li><a href="#home" data-role="button" data-icon="search">Search</a></li>
+            			<li><a href="#home" data-role="button" data-icon="user">Logout</a></li>
+						<li><a href="#profile" data-role="button" data-icon="bullets">Borrowed Books</a></li>
+            			<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
+        			</div>
+    			</div>
+    			<div id="header" data-role="header">
+    				<center><h3>Library Application</h3></center>
+        			<a id="bars-button" data-icon="grid" class="ui-btn-left" style="height: 15px; width: auto;" href="#navpanelReadingHistory"></a>
+				</div>
+			</div>
+			
+            <div data-role="content" data-scroll="true" style="height : 75%;">
+			
+				<center>
+					<div class="bookImage">                    
+					</div>
+				</center>
+				
+                <div>
+                    <center><h2>Biomaterials Engineering</h2></center>
+					<br/>					
+                </div>
+				<table>
+					<tr>
+						<td>
+							<b>Author:</b>
+						</td>
+						<td>
+							J. Doe
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>Shelf:</b>
+						</td>
+						<td>
+							QA76.76 R232 2023
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>Status:</b>
+						</td>
+						<td>
+							<i><b><span class="greenStatus">Available</span></b></i>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>Rating:</b>
+						</td>
+						<td>
+							<input type="radio" class="star" name="api-select-test" value="A"/>
+							<input type="radio" class="star" name="api-select-test" value="B"/>
+							<input type="radio" class="star" name="api-select-test" value="C"/>
+							<input type="radio" class="star" name="api-select-test" value="D"/>
+							<input type="radio" class="star" name="api-select-test" value="E"/>
+						</td>
+					</tr>
+				</table>
+				
+				
             </div>
             <div data-role="footer">
                 <h1> Copyright (r) GOF-HCI2013 </h1>

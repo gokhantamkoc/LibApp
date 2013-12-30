@@ -9,7 +9,10 @@
 	font-size: 5px;
 }
 
-.ui-controlgroup-horizontal .ui-controlgroup-controls { display: block !important; }
+.ui-controlgroup-horizontal .ui-controlgroup-controls 
+{ 
+	display: block !important; 
+}
 
 
 .scrollable {
@@ -19,13 +22,12 @@
 
 .ui-panel-inner 
 {
-	padding:0px; /*make the buttons flush edge to edge*/
+	padding:0px;
 }
-
 
 .ui-controlgroup 
 {
-	margin:0; /*make the buttons flush to the top*/
+	margin:0;
 }
 #header 
 {
@@ -38,7 +40,25 @@
 	width: auto;
 }
 
-#navpanel 
+#navpanelHome 
+{
+	margin:20px;
+	position: absolute;
+}
+
+#navpanelProfile 
+{
+	margin:20px;
+	position: absolute;
+}
+
+#navpanelLogin 
+{
+	margin:20px;
+	position: absolute;
+}
+
+#navpanelReadingHistory 
 {
 	margin:20px;
 	position: absolute;
@@ -47,4 +67,24 @@
 #readingHistoryBookList
 {
 	font-size: small;
+}
+.greenStatus
+{
+	color: Green;
+}
+.bookImage
+{
+	background-image:url("images/book.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	width: 99px;
+	height: 150px;
+}
+.star
+{
+	background-image:url("images/star.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+	width: 10px;
+	height: 10px;
 }
